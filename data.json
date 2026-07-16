@@ -1,0 +1,185 @@
+{
+  "people": [
+    {
+      "id": "alba",
+      "name": "Alba",
+      "message": "messages/alba.txt",
+      "image": "images/real/alba.jpeg",
+      "icon": "images/real/icons/alba.jpg"
+    },
+    {
+      "id": "carlos",
+      "name": "Carlos",
+      "message": "messages/carlos.txt",
+      "image": "images/real/carlos.jpeg",
+      "icon": "images/real/icons/carlos.jpg"
+    },
+    {
+      "id": "cristina y manolo",
+      "name": "Cristina y Manolo",
+      "message": "messages/cristina y manolo.txt",
+      "image": "images/real/cristina y manolo.jpeg",
+      "icon": "images/real/icons/cristina y manolo.jpg"
+    },
+    {
+      "id": "david",
+      "name": "David",
+      "message": "messages/david.txt",
+      "image": "images/real/david.jpeg",
+      "icon": "images/real/icons/david.jpg"
+    },
+    {
+      "id": "helen",
+      "name": "Helen",
+      "message": "messages/helen.txt",
+      "image": "images/real/helen.jpeg",
+      "icon": "images/real/icons/helen.jpg"
+    },
+    {
+      "id": "javi",
+      "name": "Javi",
+      "message": "messages/javi.txt",
+      "image": "images/real/javi.jpeg",
+      "icon": "images/real/icons/javi.jpg"
+    },
+    {
+      "id": "jesus",
+      "name": "Jesus",
+      "message": "messages/jesus.txt",
+      "image": "images/real/jesus.jpeg",
+      "icon": "images/real/icons/jesus.jpg"
+    },
+    {
+      "id": "laia",
+      "name": "Laia",
+      "message": "messages/laia.txt",
+      "image": "images/real/laia.jpeg",
+      "icon": "images/real/icons/laia.jpg"
+    },
+    {
+      "id": "manolita",
+      "name": "Manolita",
+      "message": "messages/manolita.txt",
+      "image": "images/real/manolita.jpeg",
+      "icon": "images/real/icons/manolita.jpg"
+    },
+    {
+      "id": "marc",
+      "name": "Marc",
+      "message": "messages/marc.txt",
+      "image": "images/real/marc.jpeg",
+      "icon": "images/real/icons/marc.jpg"
+    },
+    {
+      "id": "marta",
+      "name": "Marta",
+      "message": "messages/marta.txt",
+      "image": "images/real/marta.jpeg",
+      "icon": "images/real/icons/marta.jpg"
+    },
+    {
+      "id": "marti",
+      "name": "Marti",
+      "message": "messages/marti.txt",
+      "image": "images/real/marti.jpeg",
+      "icon": "images/real/icons/marti.jpg"
+    },
+    {
+      "id": "miriam",
+      "name": "Miriam",
+      "message": "messages/miriam.txt",
+      "image": "images/real/miriam.jpeg",
+      "icon": "images/real/icons/miriam.jpg"
+    },
+    {
+      "id": "pepe",
+      "name": "Pepe",
+      "message": "messages/pepe.txt",
+      "image": "images/real/pepe.jpeg",
+      "icon": "images/real/icons/pepe.jpg"
+    },
+    {
+      "id": "sandra",
+      "name": "Sandra",
+      "message": "messages/sandra.txt",
+      "image": "images/real/sandra.jpeg",
+      "icon": "images/real/icons/sandra.jpg"
+    },
+    {
+      "id": "teta",
+      "name": "Teta",
+      "message": "messages/teta.txt",
+      "image": "images/real/teta.png",
+      "icon": "images/real/icons/teta.jpg"
+    },
+    {
+      "id": "victor",
+      "name": "Victor",
+      "message": "messages/victor.txt",
+      "image": "images/real/victor.jpeg",
+      "icon": "images/real/icons/victor.jpg"
+    }
+  ],
+  "fakes": [
+    {
+      "name": "Cristiano Ronaldo",
+      "icon": "images/fake/Cristiano Ronaldo.jpg"
+    },
+    {
+      "name": "Donald Trump",
+      "icon": "images/fake/Donald Trump.jpg"
+    },
+    {
+      "name": "Indiana Jones",
+      "icon": "images/fake/Indiana Jones.jpg"
+    },
+    {
+      "name": "Joan Laporta",
+      "icon": "images/fake/Joan Laporta.jpg"
+    },
+    {
+      "name": "Jordi Pujol",
+      "icon": "images/fake/Jordi Pujol.jpg"
+    },
+    {
+      "name": "Julio Iglesias",
+      "icon": "images/fake/Julio Iglesias.jpg"
+    },
+    {
+      "name": "Leo Messi",
+      "icon": "images/fake/Leo Messi.jpg"
+    },
+    {
+      "name": "Marc Buch i Rigola",
+      "icon": "images/fake/Marc Buch i Rigola.jpg"
+    },
+    {
+      "name": "Mariano Rajoy",
+      "icon": "images/fake/Mariano Rajoy.jpg"
+    },
+    {
+      "name": "Mister Bean",
+      "icon": "images/fake/Mister Bean.jpg"
+    },
+    {
+      "name": "Obi Wan Kenobi",
+      "icon": "images/fake/Obi Wan Kenobi.png"
+    },
+    {
+      "name": "Pedro Sanchez",
+      "icon": "images/fake/Pedro Sanchez.jpg"
+    },
+    {
+      "name": "Shakira",
+      "icon": "images/fake/Shakira.jpg"
+    },
+    {
+      "name": "Silvia Orriols i Serra",
+      "icon": "images/fake/Silvia Orriols i Serra.jpg"
+    },
+    {
+      "name": "Sylvester Stallone",
+      "icon": "images/fake/Sylvester Stallone.jpg"
+    }
+  ]
+}

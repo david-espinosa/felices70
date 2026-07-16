@@ -1,0 +1,17 @@
+I want to create an app like web page, spa like, for mobile visualization.
+
+It would be deployed to a web allowed s3 bucket, which later on I would create a route 53 dns record for it.
+
+Introduction:
+There is an introduction with the instructions stating that for the challenge to succeed the user, which name is Toni, needs to encertar cada opcion, presenta  las instrucciones usando la imagen "saw.jpg", si aciertas todas las pruebas recebirias un regalo, y sino lo consigues recibiras la visita del personaje para el que usamos la imagen "guapo.png"
+Mientras se presentan instrucciones apare la imagen de saw.jpg todo el rato, los mensajes se van escribiendo poco a poco asi como escritos manualmente en directo
+Cuando se presente de que en caso de no hacertar se recibira la visita de una persona muy especial, mostrar imagen guapo.png
+
+Given X congratulation messages, 1 long phrase or 2 short ones which would be presented one per one, then the user would have to guess who wroted it choosing between 3 options, which are a person icon and the person name. Only 1 is the real one the other 2 are fake. User clicks in the option and the app says its wrong or not. Then jumps to the next one.
+
+
+Real messages are stored in folder name "messages", the name relates to the real person, extension txt for all them
+The images of the real persons are stored in folder images/real, the image needs to be shown after each response of the user
+For presenting the options use the real one from real/icon, and two from the folder images/fake, random ones, try to not repeat them unless necessary
+
+create the required folders you need
