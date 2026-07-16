@@ -221,20 +221,37 @@
     window.scrollTo({ top: 0, behavior: "instant" });
   }
 
-  function enterFullscreenLandscape(container) {
-    const request =
-      container.requestFullscreen ||
-      container.webkitRequestFullscreen ||
-      container.webkitEnterFullscreen;
-    if (!request) return;
-    const lockLandscape = () => {
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock("landscape").catch(() => {});
-      }
+  function openVideoOverlay() {
+    const isPortrait = window.innerHeight > window.innerWidth;
+    const overlay = el("div", { class: "video-overlay" + (isPortrait ? " rotated" : "") }, [
+      el("div", { class: "video-overlay-inner" }, [
+        el("iframe", {
+          src: `https://www.youtube.com/embed/${PRIZE_YOUTUBE_ID}?rel=0&modestbranding=1&autoplay=1`,
+          title: "Regalo",
+          frameborder: "0",
+          allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+          allowfullscreen: "true",
+        }),
+      ]),
+      el("button", { class: "video-overlay-close" }, ["✕"]),
+    ]);
+
+    const onResize = () => {
+      overlay.classList.toggle("rotated", window.innerHeight > window.innerWidth);
     };
-    const result = request.call(container);
-    if (result && typeof result.then === "function") result.then(lockLandscape).catch(() => {});
-    else lockLandscape();
+    const close = () => {
+      window.removeEventListener("resize", onResize);
+      document.removeEventListener("keydown", onKeydown);
+      overlay.remove();
+    };
+    const onKeydown = (e) => {
+      if (e.key === "Escape") close();
+    };
+
+    overlay.querySelector(".video-overlay-close").addEventListener("click", close);
+    window.addEventListener("resize", onResize);
+    document.addEventListener("keydown", onKeydown);
+    document.body.appendChild(overlay);
   }
 
   function renderEnd() {
@@ -245,19 +262,22 @@
       src: `https://www.youtube.com/embed/${PRIZE_YOUTUBE_ID}?rel=0&modestbranding=1`,
       title: "Regalo",
       frameborder: "0",
-      allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen",
+      allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
       allowfullscreen: "true",
     });
     const videoWrap = el("div", { class: "video-wrap" }, [videoFrame]);
     const fullscreenBtn = el("button", { class: "btn btn-secondary fullscreen-btn" }, [
       "Ver a pantalla completa ⛶",
     ]);
-    fullscreenBtn.addEventListener("click", () => enterFullscreenLandscape(videoWrap));
-    const prizeVideo = el("div", {}, [videoWrap, fullscreenBtn]);
+    fullscreenBtn.addEventListener("click", openVideoOverlay);
+
+    const playAgainBtn = el("button", { class: "btn btn-secondary" }, ["Jugar de nuevo"]);
+    playAgainBtn.addEventListener("click", startGame);
 
     const screen = el("div", { class: "screen" }, [
       el("h1", {}, ["¡Lo has conseguido!"]),
-      prizeVideo,
+      videoWrap,
+      fullscreenBtn,
       el("h2", {}, ["Aquí tienes tu regalo"]),
       el("p", { class: "score" }, ["Aciertos: ", el("b", {}, [`${state.score} / ${total}`])]),
       el(
@@ -270,10 +290,9 @@
         ]
       ),
       el("div", { class: "spacer" }),
-      el("button", { class: "btn btn-secondary" }, ["Jugar de nuevo"]),
+      playAgainBtn,
     ]);
 
-    screen.querySelector("button").addEventListener("click", startGame);
     render(screen);
   }
 
